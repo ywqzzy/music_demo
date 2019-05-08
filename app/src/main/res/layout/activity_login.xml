@@ -17,6 +17,7 @@
         android:layout_marginTop="@dimen/marginSize"/>
 
     <com.example.music_demo.views.InputView
+        android:id="@+id/input_phone"
         android:layout_width="match_parent"
         android:layout_height="@dimen/inputViewHeight"
         android:layout_marginTop="@dimen/marginSize"
@@ -29,6 +30,7 @@
     <View style="@style/line"/>
     
     <com.example.music_demo.views.InputView
+        android:id="@+id/input_password"
         android:layout_width="match_parent"
         android:layout_height="@dimen/inputViewHeight"
         android:layout_marginTop="@dimen/marginSize"
@@ -55,6 +57,8 @@
     <Button
         style="@style/commitBtn"
         android:text="登  录"
-        android:layout_marginTop="@dimen/marginSize"/>
+        android:layout_marginTop="@dimen/marginSize"
+        android:onClick="onCommitClick"
+        />
 
 </LinearLayout>
