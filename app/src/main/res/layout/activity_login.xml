@@ -15,6 +15,7 @@
         android:src="@mipmap/carrot"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/marginSize"/>
+
     <com.example.music_demo.views.InputView
         android:layout_width="match_parent"
         android:layout_height="@dimen/inputViewHeight"
@@ -25,5 +26,35 @@
         >
 
     </com.example.music_demo.views.InputView>
+    <View style="@style/line"/>
+    
+    <com.example.music_demo.views.InputView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputViewHeight"
+        android:layout_marginTop="@dimen/marginSize"
+        app:input_icon="@mipmap/password"
+        app:input_hint="密码"
+        app:is_password="true"
+        >
+
+    </com.example.music_demo.views.InputView>
+    <View style="@style/line"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="立即注册"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/marginSize"
+        android:textSize="@dimen/infoSize"
+        android:textColor="@color/mainColor"
+
+        android:onClick="onRegisterClick"
+        />
+    
+    <Button
+        style="@style/commitBtn"
+        android:text="登  录"
+        android:layout_marginTop="@dimen/marginSize"/>
 
 </LinearLayout>
