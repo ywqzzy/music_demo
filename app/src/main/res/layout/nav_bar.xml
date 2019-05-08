@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/back"
+        android:layout_marginLeft="@dimen/marginSize"
         android:layout_gravity="center_vertical"/>
 
     <TextView
@@ -29,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/me"
+        android:layout_marginRight="@dimen/marginSize"
         android:layout_gravity="right|center_vertical"/>
 
 </FrameLayout>

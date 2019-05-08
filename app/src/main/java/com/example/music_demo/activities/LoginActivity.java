@@ -31,6 +31,8 @@ public class LoginActivity extends BaseActivity {
      * 注册点击事件
      */
     public void onRegisterClick(View v) {
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
 
     }
 
