@@ -1,9 +1,11 @@
-package com.example.music_demo;
+package com.example.music_demo.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.music_demo.R;
+import com.example.music_demo.activities.BaseActivity;
+
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
