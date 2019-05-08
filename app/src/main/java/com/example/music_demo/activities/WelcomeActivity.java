@@ -26,13 +26,18 @@ public class WelcomeActivity extends BaseActivity {
             @Override
             public void run() {
                 //Log.e(TAG,"当前线程为："+ Thread.currentThread());
-                toMain();
+                toLogin();
             }
         }, 3*1000);
     }
 
     private void toMain() {
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    private void toLogin() {
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 }
