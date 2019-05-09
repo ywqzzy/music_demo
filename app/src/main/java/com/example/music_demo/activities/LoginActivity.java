@@ -39,9 +39,9 @@ public class LoginActivity extends BaseActivity {
         String phone = mInputPhone.getInputStr();
         String password = mInputPassword.getInputStr();
 
-        if(!UserUtils.validateLogin(this,phone, password)) {
+        /*if(!UserUtils.validateLogin(this,phone, password)) {
             return;
-        }
+        }*/
 
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
