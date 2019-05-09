@@ -17,11 +17,9 @@ public class BaseActivity extends Activity {
     }
 
     protected void initNavBar(boolean isShowBack,String title, boolean isShowMe) {
-
         mIvBack = fd(R.id.iv_back);
         mIvMe = fd(R.id.iv_me);
         mTvTitle = fd(R.id.tv_title);
-
 
         mIvBack.setVisibility(isShowBack? View.VISIBLE : View.GONE);
         mIvMe.setVisibility(isShowMe? View.VISIBLE : View.GONE);
@@ -34,6 +32,12 @@ public class BaseActivity extends Activity {
                 onBackPressed();
             }
         });
+    }
 
+    @Override
+    public void finish() {
+        super.finish();
+        //注释掉activity本身的过渡动画
+        overridePendingTransition(0, 0);
     }
 }

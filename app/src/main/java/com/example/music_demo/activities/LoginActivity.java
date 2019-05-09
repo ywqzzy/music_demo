@@ -7,7 +7,6 @@ import com.example.music_demo.R;
 import com.example.music_demo.utils.UserUtils;
 import com.example.music_demo.views.InputView;
 
-import java.net.PasswordAuthentication;
 
 public class LoginActivity extends BaseActivity {
 

@@ -4,7 +4,19 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimaryDark">@color/mainColor</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
         <!--<item name="android:statusBarColor">@color/mainColor</item> -->
+    </style>
+
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <!-- 新activity执行的动画-->
+        <item name="android:activityOpenEnterAnimation">@anim/open_enter</item>
+        <!-- 原activity执行的动画-->
+        <item name="android:activityOpenExitAnimation">@anim/open_exit</item>
+        <!--退出activity执行的动画-->
+        <item name="android:activityCloseExitAnimation">@anim/close_exit</item>
+        <!--退出activity，重新显示的activity执行的动画-->
+        <item name="android:activityCloseEnterAnimation">@anim/close_enter</item>
     </style>
 
     <!-- 分割线 -->
