@@ -1,3 +1,3 @@
 Mooc music practice demo.
-Try to enhance android programming.
+Try to enhance android programming skill.
 
