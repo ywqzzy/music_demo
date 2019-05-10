@@ -8,5 +8,7 @@
     <color name="lineColor">#C3C3C3</color>
     <color name="mainColorH">#C80F1F</color>
     <color name="itemColorH">#DEE1E6</color>
+    <color name="titleColor">#333333</color>
+    <color name="infoColor">#888888</color>
 
 </resources>
