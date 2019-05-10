@@ -35,10 +35,16 @@ public class MainActivity extends BaseActivity {
         mGridAdapter = new MusicGridAdapter(this);
         mRvGrid.setAdapter(mGridAdapter);
 
+        /**
+         * 知道列表高度的情况下，直接在布局中把高度定义上
+         * 不知，需要手动计算rv的高度
+         */
+
         mRvList = fd(R.id.rv_list);
         mRvList.setLayoutManager(new LinearLayoutManager(this));
+        mRvList.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
         mRvList.setNestedScrollingEnabled(false);
-        mListAdapter = new MusicListAdapter(this);
+        mListAdapter = new MusicListAdapter(this,mRvList);
         mRvList.setAdapter(mListAdapter);
     }
 }

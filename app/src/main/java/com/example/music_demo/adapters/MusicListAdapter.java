@@ -6,31 +6,50 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.example.music_demo.R;
 
 public class MusicListAdapter extends RecyclerView.Adapter<MusicListAdapter.ViewHolder> {
 
     private Context mContext;
+    private View mItemView;
+    private RecyclerView mRv;
+    private boolean isCalculatedRvHeight;
 
-    public MusicListAdapter(Context context) {
+    public MusicListAdapter(Context context,RecyclerView rv) {
         mContext = context;
+        mRv = rv;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_list_music,viewGroup,false));
+        mItemView = LayoutInflater.from(mContext).inflate(R.layout.item_list_music,viewGroup,false);
+        return  new ViewHolder(mItemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-
+        setRecyclerViewHeight();
     }
 
     @Override
     public int getItemCount() {
         return 8;
+    }
+
+    private void setRecyclerViewHeight () {
+        if(isCalculatedRvHeight || mRv == null) return;
+        isCalculatedRvHeight = true;
+        RecyclerView.LayoutParams itemViewlp = (RecyclerView.LayoutParams)mItemView.getLayoutParams();
+
+        int itemCount = getItemCount();
+        int recyclerViewHeight = itemViewlp.height * itemCount;
+        LinearLayout.LayoutParams rvLp =  (LinearLayout.LayoutParams)mRv.getLayoutParams();
+        rvLp.height = recyclerViewHeight;
+        mRv.setLayoutParams(rvLp);
+
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
